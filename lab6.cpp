@@ -1,3 +1,8 @@
+/*
+Домашняя работа №6
+Алексей Шапран 
+Группа: ИУ8-14
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
