@@ -1,5 +1,5 @@
 /*
-Домашняя работа №6
+Лабораторная работа №6
 Алексей Шапран 
 Группа: ИУ8-14
 */
@@ -87,18 +87,21 @@ int main(void)
 		p = (List *)malloc(sizeof(List));
 		cout << endl << "FIO: ";
 		fflush(stdin); 
-		cin >> p->customer.fio;
+		cin.getline(p->customer.fio, 64);
+		fflush(stdin); 
 		cout << "Address: ";
 		fflush(stdin); 
-		cin >> p->customer.address;
+		cin.getline(p->customer.address, 64);
+		fflush(stdin);
 		cout << "Name of booking: ";
 		fflush(stdin); 
-		cin >> p->customer.name;
+		cin.getline(p->customer.name, 32);
+		fflush(stdin);
 		cout << "Serial number: ";
 		fflush(stdin); 
 		cin >> p->customer.serial_number;
 		addFirst(pF, p);
-		printf("For continue press Y or y else any key! ");
+		cout << "For continue press Y or y else any key! ";
 		Ch = _getche();
 	} while (Ch == 'Y' || Ch == 'y');
 	
@@ -125,7 +128,7 @@ int main(void)
 		else pi = pi->pNext;
 	}
 	
-	cout << endl << "Srting: ";
+	cout << endl << "String: ";
 	for (List *pi = pF; pi; pi = pi->pNext) 
 		cout << endl << pi->customer.fio << " " << pi->customer.address << " " << pi->customer.name << " " << pi->customer.serial_number;
 	cout << endl << "For exit press any key ";
